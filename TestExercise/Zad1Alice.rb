@@ -3,7 +3,7 @@ require 'socket'
 
 plaintext = "test message"
 
-socket = TCPSocket.new("localhost",6666)
+socket = TCPSocket.new("192.168.0.20",6666)
 
 cipher = OpenSSL::Cipher.new('AES-256-CBC')
 cipher.encrypt

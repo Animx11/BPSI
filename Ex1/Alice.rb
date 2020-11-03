@@ -3,10 +3,10 @@ require 'socket'
 require 'digest'
 
 puts "Enter ip address:"
-addressIp = gets
-addressIp = addressIp.strip
+address_ip = gets
+address_ip = address_ip.to_s.strip
 
-socket = TCPSocket.new(addressIp, 6666)
+socket = TCPSocket.new(address_ip, 6666)
 
 a = rand 1..100000000
 b = rand 1..100000000
