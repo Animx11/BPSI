@@ -27,7 +27,7 @@ File.open("data.txt").each do |line|
 end
 
 # Diffie-Hellman
-dh = OpenSSL::PKey::DH.new(2048)
+dh = OpenSSL::PKey::DH.new(512)
 der = dh.public_key.to_der
 socket.puts der.to_s.unpack("B*")
 socket.puts dh.pub_key.to_s.unpack("B*")
