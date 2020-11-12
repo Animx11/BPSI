@@ -57,3 +57,8 @@ build-iPhoneSimulator/
 
 ## RubyMine
 .idea/
+
+## Packing
+
+*.zip
+*.rar
