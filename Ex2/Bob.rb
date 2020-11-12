@@ -45,4 +45,8 @@ decrypted = decipher.update(encrypted) + decipher.final
 # Show decrypted data
 puts decrypted
 
+file = File.open("out.txt", "w")
+file.puts(decrypted)
+file.close
+
 client.close
