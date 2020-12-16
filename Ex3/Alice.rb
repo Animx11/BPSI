@@ -17,6 +17,7 @@ sig = dsa.syssign(digest)
 
 socket.puts dsa_pub_key_pem.unpack("B*")
 socket.puts rsa_pub_key_pem.unpack("B*")
+socket.puts digest.unpack("B*")
 socket.puts sig.unpack("B*")
 
 socket.close
