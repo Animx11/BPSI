@@ -17,7 +17,7 @@ if ver
   puts "Sign is correct, sending message to Alice"
   message = "Message to send"
   rsa = OpenSSL::PKey::RSA.new(alice_rsa_pub_key_pem)
-  encrypted_message = rsa.private_encrypt(message)
+  encrypted_message = rsa.public_encrypt(message)
   client.puts encrypted_message.unpack("B*")
   puts "Message was correctly encrypted and sent to Alice"
 
