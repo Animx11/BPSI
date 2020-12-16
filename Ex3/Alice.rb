@@ -20,7 +20,7 @@ socket.puts dsa_pub_key_pem.unpack("B*")
 socket.puts rsa_pub_key_pem.unpack("B*")
 socket.puts sig.unpack("B*")
 
-encrypted_message = [socket.gets.gsub(/\n$/, '')].pack("B*")
+encrypted_message = [client.gets.gsub(/\n$/, '')].pack("B*")
 
 rsa.private_decrypt(encrypted_message)
 

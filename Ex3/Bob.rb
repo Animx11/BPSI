@@ -13,7 +13,7 @@ digest = OpenSSL::Digest::SHA1.digest(alice_rsa_pub_key_pem)
 
 ver = puts dsa.sysverify(digest, alice_sig)
 
-if ver == true
+if ver === true
   puts "Sign is correct, sending message to Alice"
   message = "Message to send"
   rsa = OpenSSL::PKey::RSA.new(alice_rsa_pub_key_pem)
