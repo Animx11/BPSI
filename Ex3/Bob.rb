@@ -11,7 +11,7 @@ alice_sig = [client.gets.gsub(/\n$/, '')].pack("B*")
 dsa = OpenSSL::PKey::DSA.new(alice_dsa_pub_key_pem)
 digest = OpenSSL::Digest::SHA1.digest(alice_rsa_pub_key_pem)
 
-ver = puts dsa.sysverify(digest, alice_sig)
+ver = dsa.sysverify(digest, alice_sig)
 
 if ver
   puts "Sign is correct, sending message to Alice"
