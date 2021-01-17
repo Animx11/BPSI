@@ -1,6 +1,7 @@
 require 'openssl'
 require 'socket'
 
+puts ""
 puts "Enter ip address:"
 address_ip = gets.to_s.strip
 
@@ -32,3 +33,4 @@ socket.close
 
 puts "Disconnecting socket"
 puts "Disabling the program"
+puts ""

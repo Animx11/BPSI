@@ -2,6 +2,7 @@ require 'openssl'
 require 'socket'
 
 socket = TCPServer.new(7777)
+puts ""
 puts "Waiting for connection"
 client = socket.accept
 
@@ -35,3 +36,4 @@ end
 socket.close
 puts "Disconnecting server"
 puts "Disabling the program"
+puts ""
